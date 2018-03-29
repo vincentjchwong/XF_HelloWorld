@@ -10,10 +10,14 @@ namespace HelloWorld
 {
 	public partial class MainPage : ContentPage
 	{
+        //public Button Nav1;
+
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+            //Nav1 = this.FindByName<Button>("Nav1BButton");
+            //Nav1.Margin = new Thickness(0);
+        }
 
         private void Settings_Clicked(object sender, EventArgs e)
         {

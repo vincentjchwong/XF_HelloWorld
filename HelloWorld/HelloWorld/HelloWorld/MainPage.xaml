@@ -4,87 +4,133 @@
              xmlns:local="clr-namespace:HelloWorld"
              x:Class="HelloWorld.MainPage">
 
-    <Grid Margin="10">
+    <Grid>
         <!-- Define number of Rows and Columns-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/> 
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Button Grid.Row="0" Grid.Column="0" Text="0"/>
-        <Button Grid.Row="0" Grid.Column="1" Text="1"/>
-        <Button Grid.Row="0" Grid.Column="2" Text="2"/>
-        <Button Grid.Row="1" Grid.Column="0" Text="3"/>
-        <Button Grid.Row="1" Grid.Column="1" Text="4"/>
-        <Button Grid.Row="1" Grid.Column="2" Text="5"/>
-        <Button Grid.Row="2" Grid.Column="0" Text="6"/>
-        <Button Grid.Row="2" Grid.Column="1" Text="7"/>
-        <Button Grid.Row="2" Grid.Column="2" Text="Settings" Clicked="Settings_Clicked"/>
-
-        <!-- Second Row of Tiles --><!--
-        <Grid Grid.Row ="1">
+        </Grid.ColumnDefinitions>-->
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <StackLayout Grid.Column="0" Margin="5" BackgroundColor="Brown">
-                <Label Text="Grid 4"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-            </StackLayout>
-            <StackLayout Grid.Column="1" Margin="5" BackgroundColor="Green">
-                <Label Text="Grid 5"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-            </StackLayout>
-            <StackLayout Grid.Column="2" Margin="5" BackgroundColor="Orange">
-                <Label Text="Grid 6"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-            </StackLayout>
-            
-            --><!-- Third Row of Tiles --><!--
-            <Grid Grid.Row ="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackLayout Grid.Column="0" Margin="5" BackgroundColor="Purple">
-                    <Label Text="Grid 7"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                </StackLayout>
-                <StackLayout Grid.Column="1" Margin="5" BackgroundColor="Red">
-                    <Label Text="Grid 8"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-                </StackLayout>
-                <StackLayout Grid.Column="2" Margin="5" BackgroundColor="Yellow">
-                    <Label Text="Grid 9"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
-                </StackLayout>
-            </Grid>
-        </Grid>-->
-    </Grid>
-    
-    <!--<StackLayout Margin="10">
-        <Label Text="FitApp"
-               HorizontalOptions="Center"/>
-        <Button Text="Settings" 
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Clicked="Settings_Clicked"/>
 
-    </StackLayout>-->
-    
+            <Button Grid.Column="0" Text="Nav1"/>
+            <Button Grid.Column="1" Text="Nav2"/>
+            <Button Grid.Column="2" Text="Nav3"/>
+            <!--<StackLayout Grid.Column="0">
+                <Button Text="Nav1"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1">
+                <Button Text="Nav2"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2">
+                <Button Text="Nav3"/>
+            </StackLayout>-->
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Text="Nav1"/>
+            <Button Grid.Column="1" Text="Nav2"/>
+            <Button Grid.Column="2" Text="Nav3"/>
+            <!--<StackLayout Grid.Column="0">
+                <Button Text="Nav1"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1">
+                <Button Text="Nav2"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2">
+                <Button Text="Nav3"/>
+            </StackLayout>-->
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Text="Nav1"/>
+            <Button Grid.Column="1" Text="Nav2"/>
+            <Button Grid.Column="2" Text="Nav3"/>
+            <!--<StackLayout Grid.Column="0">
+                <Button Text="Nav1"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1">
+                <Button Text="Nav2"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2">
+                <Button Text="Nav3"/>
+            </StackLayout>-->
+        </Grid>
+        
+        <Grid Grid.Row="3" ColumnSpacing="0" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" Style="{StaticResource NavigationBar}">
+                <Button x:Name="Nav1Button" Text="Nav1" Style="{StaticResource NavigationButton}"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Style="{StaticResource NavigationBar}">
+                <Button Text="Nav2" Style="{StaticResource NavigationButton}"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="2" Style="{StaticResource NavigationBar}">
+                <Button Text="Nav3" Style="{StaticResource NavigationButton}"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="3" Style="{StaticResource NavigationBar}">
+                <Button Text="Meal" Style="{StaticResource NavigationButton}" Clicked="Meal_Clicked"/>
+            </StackLayout>
+
+            <!--<StackLayout Grid.Column="0">
+                <Button Text="Nav1" Style="{StaticResource NavigationButton}"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1">
+                <Button Text="Nav2" Style="{StaticResource NavigationButton}"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2">
+                <Button Text="Nav3" Style="{StaticResource NavigationButton}"/>
+            </StackLayout>
+            <StackLayout Grid.Column="3">
+                <Button Text="Meal" Style="{StaticResource NavigationButton}" Clicked="Meal_Clicked"/>
+            </StackLayout>-->
+
+        </Grid>
+        
+
+        <!-- Define all Grid Tiles--><!--
+        <Button Grid.Row="0" Grid.Column="0" Text="0"/>
+        <Button Grid.Row="0" Grid.Column="1" Text="1"/>
+        <Button Grid.Row="0" Grid.Column="2" Text="2"/>
+        <Button Grid.Row="1" Grid.Column="0" Text="3"/>
+        <Button Grid.Row="1" Grid.Column="1" Text="4"/>
+        <Button Grid.Row="1" Grid.Column="2" Text="Meal" Clicked="Meal_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="0" Text="6"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="7"/>
+        <Button Grid.Row="2" Grid.Column="2" Text="Settings" Clicked="Settings_Clicked"/>-->
+
+
+
+    </Grid>
+
 
 </ContentPage>
