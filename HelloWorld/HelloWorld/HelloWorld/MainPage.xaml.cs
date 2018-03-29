@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
 namespace HelloWorld
 {
 	public partial class MainPage : ContentPage
@@ -16,7 +17,12 @@ namespace HelloWorld
 
         private void Settings_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Settings());
+            Navigation.PushAsync(new SettingsPage());
+        }
+
+        private void Meal_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MealPage());
         }
     }
 }

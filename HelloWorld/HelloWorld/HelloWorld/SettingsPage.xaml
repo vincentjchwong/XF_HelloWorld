@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.SettingsPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid Margin="10">
+
+        <TableView>
+            <TableView.Root>
+                <TableSection Title="General">
+                    <SwitchCell Text="Night Mode" 
+                                x:Name="NightMode"
+                                On="False"/>
+                    <SwitchCell Text="Cloud Backup"
+                                x:Name="CloudBackup"
+                                On="False"/>
+                </TableSection>
+                <TableSection Title="Notifications">
+                    <SwitchCell Text="Push Notifications"
+                                x:Name="PushNotif"
+                                On="True" />
+                    <SwitchCell Text="Meal Recommendations"
+                                x:Name="MealRec"
+                                On="True"/>
+                    <SwitchCell Text="Workout Recommendations"
+                                x:Name="WorkoutRec"
+                                On="True"/>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+
+        <Button Text="Reset Preferences"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="Reset_Clicked"/>
+    </Grid>
+</ContentPage>

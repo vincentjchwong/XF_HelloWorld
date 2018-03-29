@@ -3,6 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloWorld.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <!-- Background Colors-->
+            <Color x:Key="BackgroundColor">White</Color>
+            <Color x:Key="SettingsBackground">Black</Color>
+
+            <!-- Text Colors-->
+            <Color x:Key="ButtonText">White</Color>
+            
+            <!-- Style Definitions -->
+            <Style x:Key="SettingsButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource ButtonText}"/>
+                <Setter Property="HeightRequest" Value="200"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource SettingsBackground}"/>
+            </Style>
+            
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
