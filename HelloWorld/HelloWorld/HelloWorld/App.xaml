@@ -4,21 +4,24 @@
              x:Class="HelloWorld.App">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Background Colors-->
+            <!--Background Colors-->
             <Color x:Key="BackgroundColor">White</Color>
             <Color x:Key="SettingsBackground">Black</Color>
             <Color x:Key="NavigationButtonColor">Black</Color>
 
-            <!-- Text Colors-->
+            <!--Text Colors-->
             <Color x:Key="ButtonText">Black</Color>
             
-            <!-- Style Definitions -->
+            <!--Style Definitions-->
+            
+            <!--Tile Buttons -->
             <Style x:Key="SettingsButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{StaticResource ButtonText}"/>
                 <Setter Property="HeightRequest" Value="200"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource SettingsBackground}"/>
             </Style>
 
+            <!--Navigation Bar Buttons-->
             <Style x:Key="NavigationButton" TargetType="Button">
                 <!--<Setter Property="BackgroundColor" Value="{StaticResource NavigationButtonColor}"/>-->
                 <Setter Property="TextColor" Value="{StaticResource ButtonText}"/>
@@ -28,6 +31,7 @@
                 <Setter Property="HeightRequest" Value="60"/>
             </Style>
 
+            <!--Navigation Bar Properties-->
             <Style x:Key="NavigationBar" TargetType="StackLayout">
                 <Setter Property="Padding" Value="-4"/>
             </Style>

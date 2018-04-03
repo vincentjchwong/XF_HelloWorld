@@ -4,8 +4,9 @@
              x:Class="HelloWorld.SettingsPage"
              BackgroundColor="{StaticResource BackgroundColor}">
 
-    <Grid Margin="10">
-
+    <Grid Margin="0">
+        
+        <!--List of Settings-->
         <TableView>
             <TableView.Root>
                 <TableSection Title="General">
@@ -30,6 +31,7 @@
             </TableView.Root>
         </TableView>
 
+        <!--Reset Preferences Button; sets all options to their default value-->
         <Button Text="Reset Preferences"
                 HorizontalOptions="Center"
                 VerticalOptions="End"

@@ -4,19 +4,16 @@
              xmlns:local="clr-namespace:HelloWorld"
              x:Class="HelloWorld.MainPage">
 
-    <Grid>
-        <!-- Define number of Rows and Columns-->
+    <Grid Margin="0">
+        <!--Define number of Rows and Columns-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="0.5*"/> 
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>-->
+        
+        <!--Layout of first row of tiles-->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -24,19 +21,23 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Text="Nav1"/>
-            <Button Grid.Column="1" Text="Nav2"/>
-            <Button Grid.Column="2" Text="Nav3"/>
-            <!--<StackLayout Grid.Column="0">
-                <Button Text="Nav1"/>
-            </StackLayout>
-            <StackLayout Grid.Column="1">
-                <Button Text="Nav2"/>
-            </StackLayout>
-            <StackLayout Grid.Column="2">
-                <Button Text="Nav3"/>
-            </StackLayout>-->
+            <Image Source="icon.png" Grid.Column="0" Margin="10,0,0,0">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="icon.png" Grid.Column="1" Margin="5,5,5,5">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="icon.png" Grid.Column="2" Margin="0,0,10,0">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
         </Grid>
+        
+        <!--Layout of second row of tiles-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -44,19 +45,24 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Text="Nav1"/>
-            <Button Grid.Column="1" Text="Nav2"/>
-            <Button Grid.Column="2" Text="Nav3"/>
-            <!--<StackLayout Grid.Column="0">
-                <Button Text="Nav1"/>
-            </StackLayout>
-            <StackLayout Grid.Column="1">
-                <Button Text="Nav2"/>
-            </StackLayout>
-            <StackLayout Grid.Column="2">
-                <Button Text="Nav3"/>
-            </StackLayout>-->
+            <Image Source="icon.png" Grid.Column="0" Margin="10,0,0,0">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Image Source="icon.png" Grid.Column="1" Margin="5,5,5,5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Meal_Clicked"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="icon.png" Grid.Column="2" Margin="0,0,10,0">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
         </Grid>
+        
+        <!--Layout of third row of tiles-->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -64,20 +70,24 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Text="Nav1"/>
-            <Button Grid.Column="1" Text="Nav2"/>
-            <Button Grid.Column="2" Text="Nav3"/>
-            <!--<StackLayout Grid.Column="0">
-                <Button Text="Nav1"/>
-            </StackLayout>
-            <StackLayout Grid.Column="1">
-                <Button Text="Nav2"/>
-            </StackLayout>
-            <StackLayout Grid.Column="2">
-                <Button Text="Nav3"/>
-            </StackLayout>-->
+            <Image Source="icon.png" Grid.Column="0" Margin="10,0,0,0">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="icon.png" Grid.Column="1" Margin="5,5,5,5">
+                <Image.GestureRecognizers>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="icon.png" Grid.Column="2" Margin="0,0,10,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Settings_Clicked"/>
+                </Image.GestureRecognizers>
+            </Image>
         </Grid>
         
+        <!--Layout of Navigation Bar-->
         <Grid Grid.Row="3" ColumnSpacing="0" RowSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -85,6 +95,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
             <StackLayout Grid.Column="0" Style="{StaticResource NavigationBar}">
                 <Button x:Name="Nav1Button" Text="Nav1" Style="{StaticResource NavigationButton}"/>
             </StackLayout>
@@ -101,35 +112,8 @@
                 <Button Text="Meal" Style="{StaticResource NavigationButton}" Clicked="Meal_Clicked"/>
             </StackLayout>
 
-            <!--<StackLayout Grid.Column="0">
-                <Button Text="Nav1" Style="{StaticResource NavigationButton}"/>
-            </StackLayout>
-            <StackLayout Grid.Column="1">
-                <Button Text="Nav2" Style="{StaticResource NavigationButton}"/>
-            </StackLayout>
-            <StackLayout Grid.Column="2">
-                <Button Text="Nav3" Style="{StaticResource NavigationButton}"/>
-            </StackLayout>
-            <StackLayout Grid.Column="3">
-                <Button Text="Meal" Style="{StaticResource NavigationButton}" Clicked="Meal_Clicked"/>
-            </StackLayout>-->
-
         </Grid>
         
-
-        <!-- Define all Grid Tiles--><!--
-        <Button Grid.Row="0" Grid.Column="0" Text="0"/>
-        <Button Grid.Row="0" Grid.Column="1" Text="1"/>
-        <Button Grid.Row="0" Grid.Column="2" Text="2"/>
-        <Button Grid.Row="1" Grid.Column="0" Text="3"/>
-        <Button Grid.Row="1" Grid.Column="1" Text="4"/>
-        <Button Grid.Row="1" Grid.Column="2" Text="Meal" Clicked="Meal_Clicked"/>
-        <Button Grid.Row="2" Grid.Column="0" Text="6"/>
-        <Button Grid.Row="2" Grid.Column="1" Text="7"/>
-        <Button Grid.Row="2" Grid.Column="2" Text="Settings" Clicked="Settings_Clicked"/>-->
-
-
-
     </Grid>
 
 

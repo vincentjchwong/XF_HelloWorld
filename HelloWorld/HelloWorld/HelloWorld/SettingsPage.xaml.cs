@@ -12,6 +12,7 @@ namespace HelloWorld
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingsPage : ContentPage
 	{
+        //Options SwitchCell definitions
         public SwitchCell NightModeSC;
         public SwitchCell CloudBackupSC;
         public SwitchCell PushNotifSC;
@@ -22,6 +23,7 @@ namespace HelloWorld
 		{
 			InitializeComponent ();
             
+            //Get references for SwitchCells
             NightModeSC = this.FindByName<SwitchCell>("NightMode");
             CloudBackupSC = this.FindByName<SwitchCell>("CloudBackup");
             PushNotifSC = this.FindByName<SwitchCell>("PushNotif");
@@ -29,6 +31,7 @@ namespace HelloWorld
             WorkoutRecSC = this.FindByName<SwitchCell>("WorkoutRec");
         }
 
+        //Reset Preferences to default values
         private async void Reset_Clicked(object sender, EventArgs e)
         {
             var answer = await DisplayAlert("Are you sure?", "All your preferences will be reset", "Yes", "No");
