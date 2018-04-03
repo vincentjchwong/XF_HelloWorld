@@ -35,8 +35,7 @@
             <Style x:Key="NavigationBar" TargetType="StackLayout">
                 <Setter Property="Padding" Value="-4"/>
             </Style>
-            
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
