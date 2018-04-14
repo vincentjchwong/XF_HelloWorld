@@ -10,17 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace HelloWorld
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MealPage : ContentPage
+	public partial class ORMPage : ContentPage
 	{
-		public MealPage ()
+		public ORMPage ()
 		{
 			InitializeComponent ();
 		}
-
-        //Move to SettingsPage
-        private void AddMeal_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new AddMealPage());
-        }
-    }
+	}
 }

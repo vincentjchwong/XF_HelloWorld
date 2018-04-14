@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.AddMealPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"/>
+        <ToolbarItem Icon="icon.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <SearchBar x:Name="MealSearchBar"
+                       Grid.Row="0"
+                       VerticalOptions="Start"
+                       Placeholder="Search"
+                       TextChanged="Update_SearchBar"/>
+            <StackLayout Grid.Row="1">
+                <ScrollView Orientation="Vertical">
+                    <ListView x:Name="MealListView"/>
+                </ScrollView>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

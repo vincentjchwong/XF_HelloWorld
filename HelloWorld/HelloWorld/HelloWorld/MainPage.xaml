@@ -2,119 +2,158 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HelloWorld"
-             x:Class="HelloWorld.MainPage">
+             x:Class="HelloWorld.MainPage"
+             Title="Fitnesse">
 
-    <Grid Margin="0">
-        <!--Define number of Rows and Columns-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="0.5*"/>
-        </Grid.RowDefinitions>
-        
-        <!--Layout of first row of tiles-->
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
 
-            <Image Source="icon.png" Grid.Column="0" Margin="10,0,0,0">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
+        <Grid Margin="0">
+            <!--Define number of Rows and Columns-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
 
-            <Image Source="icon.png" Grid.Column="1" Margin="5,5,5,5">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
+            <!--Layout of first row of tiles-->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Image Source="icon.png" Grid.Column="2" Margin="0,0,10,0">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
-        </Grid>
-        
-        <!--Layout of second row of tiles-->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                <Image Source="DietPlannerIcon.png" Grid.Column="1" Style="{StaticResource TileLeft}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
 
-            <Image Source="icon.png" Grid.Column="0" Margin="10,0,0,0">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
+                <Image Source="GoalsIcon.png" Grid.Column="3" Style="{StaticResource TileMiddle}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="MealIcon.png" Grid.Column="5" Style="{StaticResource TileRight}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Meal_Clicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
             
-            <Image Source="icon.png" Grid.Column="1" Margin="5,5,5,5">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Meal_Clicked"/>
-                </Image.GestureRecognizers>
-            </Image>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Image Source="icon.png" Grid.Column="2" Margin="0,0,10,0">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
+                <Label Text="Diet Planner"
+                       Grid.Column="0"
+                       HorizontalOptions="StartAndExpand"
+                       Margin ="40,0,0,0"/>
+            </Grid>
+
+            <!--Layout of second row of tiles-->
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="ORMCalculatorIcon.png" Grid.Column="1" Style="{StaticResource TileLeft}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="ProgressIcon.png" Grid.Column="3" Style="{StaticResource TileMiddle}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="RoutineIcon.png" Grid.Column="5" Style="{StaticResource TileRight}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+
+            <!--Layout of third row of tiles-->
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="" Grid.Column="1" Style="{StaticResource TileLeft}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="SettingsIcon.png" Grid.Column="3" Style="{StaticResource TileMiddle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Settings_Clicked"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="" Grid.Column="5" Style="{StaticResource TileRight}">
+                    <Image.GestureRecognizers>
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
+
+            <!--Layout of Navigation Bar-->
+            <Grid Grid.Row="7" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Style="{StaticResource NavigationBar}">
+                    <Button x:Name="Nav1Button" Text="Nav1" Style="{StaticResource NavigationButton}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Style="{StaticResource NavigationBar}">
+                    <Button Text="Nav2" Style="{StaticResource NavigationButton}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Style="{StaticResource NavigationBar}">
+                    <Button Text="Nav3" Style="{StaticResource NavigationButton}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="3" Style="{StaticResource NavigationBar}">
+                    <Button Text="Meal" Style="{StaticResource NavigationButton}" Clicked="Meal_Clicked"/>
+                </StackLayout>
+
+            </Grid>
+
         </Grid>
-        
-        <!--Layout of third row of tiles-->
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
 
-            <Image Source="icon.png" Grid.Column="0" Margin="10,0,0,0">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
+    </ContentPage.Content>
 
-            <Image Source="icon.png" Grid.Column="1" Margin="5,5,5,5">
-                <Image.GestureRecognizers>
-                </Image.GestureRecognizers>
-            </Image>
-
-            <Image Source="icon.png" Grid.Column="2" Margin="0,0,10,0">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Settings_Clicked"/>
-                </Image.GestureRecognizers>
-            </Image>
-        </Grid>
-        
-        <!--Layout of Navigation Bar-->
-        <Grid Grid.Row="3" ColumnSpacing="0" RowSpacing="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            
-            <StackLayout Grid.Column="0" Style="{StaticResource NavigationBar}">
-                <Button x:Name="Nav1Button" Text="Nav1" Style="{StaticResource NavigationButton}"/>
-            </StackLayout>
-
-            <StackLayout Grid.Column="1" Style="{StaticResource NavigationBar}">
-                <Button Text="Nav2" Style="{StaticResource NavigationButton}"/>
-            </StackLayout>
-
-            <StackLayout Grid.Column="2" Style="{StaticResource NavigationBar}">
-                <Button Text="Nav3" Style="{StaticResource NavigationButton}"/>
-            </StackLayout>
-
-            <StackLayout Grid.Column="3" Style="{StaticResource NavigationBar}">
-                <Button Text="Meal" Style="{StaticResource NavigationButton}" Clicked="Meal_Clicked"/>
-            </StackLayout>
-
-        </Grid>
-        
-    </Grid>
 
 
 </ContentPage>

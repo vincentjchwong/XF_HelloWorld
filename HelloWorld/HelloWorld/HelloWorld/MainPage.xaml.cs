@@ -17,11 +17,13 @@ namespace HelloWorld
 			InitializeComponent();
             //Nav1 = this.FindByName<Button>("Nav1BButton");
             //Nav1.Margin = new Thickness(0);
+            
         }
 
         //Move to SettingsPage
         private void Settings_Clicked(object sender, EventArgs e)
         {
+            //DisplayAlert(App.ScreenHeight.ToString(), "", "ok");
             Navigation.PushAsync(new SettingsPage());
         }
 

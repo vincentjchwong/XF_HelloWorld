@@ -4,10 +4,18 @@
              x:Class="HelloWorld.App">
     <Application.Resources>
         <ResourceDictionary>
+
             <!--Background Colors-->
-            <Color x:Key="BackgroundColor">White</Color>
-            <Color x:Key="SettingsBackground">Black</Color>
+            <Color x:Key="NavigationPageBackgroundColor">#FFF2F2F2</Color>
+            <Color x:Key="SettingsBackground"></Color>
             <Color x:Key="NavigationButtonColor">Black</Color>
+            
+            <!--Toolbar Colors-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#FFA9A9A9"/>
+                <Setter Property="BarTextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource NavigationPageBackgroundColor}"/>
+            </Style>
 
             <!--Text Colors-->
             <Color x:Key="ButtonText">Black</Color>
@@ -15,10 +23,24 @@
             <!--Style Definitions-->
             
             <!--Tile Buttons -->
-            <Style x:Key="SettingsButton" TargetType="Button">
-                <Setter Property="TextColor" Value="{StaticResource ButtonText}"/>
-                <Setter Property="HeightRequest" Value="200"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource SettingsBackground}"/>
+            <Style x:Key="TileLeft" TargetType="Button">
+                <!--<Setter Property="Margin" Value="40,0,0,0"/>-->
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <!--<Setter Property="HeightRequest" Value="App.ScreenHeight"/>-->
+
+            </Style>
+            
+            <Style x:Key="TileMiddle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <!--<Setter Property="Margin" Value="20,20,20,20"/>-->
+            </Style>
+            
+            <Style x:Key="TileRight" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <!--<Setter Property="Margin" Value="0,0,40,0"/>-->
             </Style>
 
             <!--Navigation Bar Buttons-->
@@ -35,6 +57,10 @@
             <Style x:Key="NavigationBar" TargetType="StackLayout">
                 <Setter Property="Padding" Value="-4"/>
             </Style>
+
+            <!--<Style x:Key="{x:Type StatusBar}" TargetType="{x:Type StatusBar}">
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+            </Style>-->
 
         </ResourceDictionary>
     </Application.Resources>

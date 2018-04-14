@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 using Xamarin.Forms;
 
@@ -9,13 +10,16 @@ namespace HelloWorld
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static int ScreenHeight { get; set; }
+        public static int ScreenWidth { get; set; }
+
+        public App ()
 		{
 			InitializeComponent();
 
 			MainPage = new NavigationPage(new MainPage());
             //SettingsPage = new NavigationPage(new Settings());
-		}
+        }
 
 		protected override void OnStart ()
 		{

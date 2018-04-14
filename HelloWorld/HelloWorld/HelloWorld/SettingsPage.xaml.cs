@@ -13,11 +13,11 @@ namespace HelloWorld
 	public partial class SettingsPage : ContentPage
 	{
         //Options SwitchCell definitions
-        public SwitchCell NightModeSC;
-        public SwitchCell CloudBackupSC;
-        public SwitchCell PushNotifSC;
-        public SwitchCell MealRecSC;
-        public SwitchCell WorkoutRecSC;
+        private SwitchCell NightModeSC;
+        private SwitchCell CloudBackupSC;
+        private SwitchCell PushNotifSC;
+        private SwitchCell MealRecSC;
+        private SwitchCell WorkoutRecSC;
 
         public SettingsPage ()
 		{
